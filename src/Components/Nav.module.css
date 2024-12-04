@@ -1,0 +1,111 @@
+/* components/Nav.module.css */
+
+.navbar {
+  display: flex;
+
+  width: 98%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  color: #fff; /* Color de las letras por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+  background-color: none; 
+  margin-left: 12px;
+  margin-top: 2px;
+  /* margin: 1rem;
+  margin-bottom: 0rem; */
+}
+
+.navbar.scrolled {
+  background-color: #fff; /* Fondo blanco cuando se hace scroll */
+  color: #000; /* Letras negras cuando se hace scroll */
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 3rem;
+  height: auto;
+  animation: rotateLogo 10s infinite linear;
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit; /* Hereda el color del navbar */
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover {
+  color: #00aaff;
+  transform: scale(1.1);
+}
+
+/* Estilos del ícono del menú */
+.menuIcon {
+  display: none; /* Ocultar por defecto en pantallas grandes */
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.hamburgerIcon {
+  font-size: 2rem;
+}
+
+.closeIcon {
+  font-size: 2rem;
+}
+
+/* Responsive Design: cuando la pantalla es pequeña */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block; /* Mostrar el ícono de menú en pantallas pequeñas */
+  }
+
+  .links {
+    display: none; /* Ocultar los enlaces de navegación por defecto */
+    flex-direction: column;
+    width: 100%;
+    background-color: #333; /* Fondo oscuro para el menú */
+    position: absolute;
+    top: 60px; /* Ajusta dependiendo del tamaño del navbar */
+    left: 0;
+    padding: 1rem;
+  }
+
+  .links.open {
+    display: flex; /* Mostrar los enlaces cuando el menú está abierto */
+  }
+
+  .link {
+    padding: 10px 0;
+    font-size: 1.2rem;
+  }
+}

@@ -1,168 +1,56 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+    position: relative;
+    overflow: hidden; /* Para evitar que los círculos sobresalgan */
   }
-}
+  
+  
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
-}
-
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+  .circleContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Asegúrate de que los círculos estén detrás del contenido */
+    pointer-events: none; /* Evita que los círculos interfieran con el clic */
   }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%; /* Hace que los divs sean círculos */
+    filter: blur(40px); /* Aplica el desenfoque */
+    opacity: 0.5; /* Controla la opacidad para hacer el efecto más sutil */
   }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+  
+  .circle:nth-child(1) {
+    width: 300px;
+    height: 300px;  
+    top: 10%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(177, 0, 226, 0.916) 0%, rgba(177, 0, 226, 0) 80%);
   }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
+  
+  .circle:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    top: 30%;
+    right: 15%;
+    background: radial-gradient(circle, rgba(0, 42, 255, 0.703) 0%, rgba(0, 43, 255, 0) 80%);
   }
-
-  .main {
-    align-items: center;
+  
+  .circle:nth-child(3) {
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    right: 20%;
+    background: radial-gradient(circle, rgba(177, 0, 226, 0.758) 0%, rgba(177, 0, 226, 0) 80%);
   }
-
-  .main ol {
-    text-align: center;
+  
+  .circle:nth-child(4) {
+    width: 600px;
+    height: 600px;
+    bottom: 10%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(0, 42, 255, 0.836) 0%, rgba(0, 43, 255, 0) 80%);
   }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-}
+  
