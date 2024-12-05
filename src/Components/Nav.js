@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import { useState, useEffect } from "react";
-import Link from 'next/link';
-import styles from './Nav.module.css';
+import Link from "next/link";
+import styles from "./Nav.module.css";
 
 const Nav = () => {
   const [prevScrollY, setPrevScrollY] = useState(0);
@@ -26,15 +26,19 @@ const Nav = () => {
       setPrevScrollY(window.scrollY); // Actualizar la posición del scroll
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollY]);
 
   // Función para alternar el menú
-  const toggleMenu = () => setIsMenuOpen(prevState => !prevState);
+  const toggleMenu = () => setIsMenuOpen((prevState) => !prevState);
 
   return (
-    <nav className={`${styles.navbar} ${hidden ? styles.hidden : ''} ${scrolled ? styles.scrolled : ''}`}>
+    <nav
+      className={`${styles.navbar} ${hidden ? styles.hidden : ""} ${
+        scrolled ? styles.scrolled : ""
+      }`}
+    >
       <div className={styles.logo}>
         <img src="./logo.png" alt="Logo" className={styles.logoImage} />
       </div>
@@ -46,12 +50,27 @@ const Nav = () => {
           <span className={styles.hamburgerIcon}>☰</span> // Icono de hamburguesa
         )}
       </div>
-      <div className={`${styles.links} ${isMenuOpen ? styles.open : ''}`}>
-        <Link href="#experiencia" className={styles.link}>Experiencia</Link>
-        <Link href="#experiencia" className={styles.link}>/</Link>
-        <Link href="#proyectos" className={styles.link}>Proyectos</Link>
-        <Link href="#experiencia" className={styles.link}>/</Link>
-        <Link href="#contacto" className={styles.link}>Contacto</Link>
+      <div className={`${styles.links} ${isMenuOpen ? styles.open : ""}`}>
+        {isMenuOpen && ( // Mostrar el ícono de cerrar dentro del menú
+          <span className={styles.closeIcon} onClick={toggleMenu}>
+            X
+          </span>
+        )}
+        <Link href="#experiencia" className={styles.link}>
+          Experiencia
+        </Link>
+        <Link href="#experiencia" className={styles.link}>
+          /
+        </Link>
+        <Link href="#proyectos" className={styles.link}>
+          Proyectos
+        </Link>
+        <Link href="#experiencia" className={styles.link}>
+          /
+        </Link>
+        <Link href="#contacto" className={styles.link}>
+          Contacto
+        </Link>
       </div>
     </nav>
   );

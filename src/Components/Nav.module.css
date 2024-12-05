@@ -85,6 +85,14 @@
 
 /* Responsive Design: cuando la pantalla es pequeña */
 @media (max-width: 768px) {
+  .navbar {
+   height: 15%;
+    width: 100%;
+ 
+    margin-left: 0px;
+    margin-top: 0px;
+  
+  }
   .menuIcon {
     display: block; /* Mostrar el ícono de menú en pantallas pequeñas */
   }
@@ -92,12 +100,16 @@
   .links {
     display: none; /* Ocultar los enlaces de navegación por defecto */
     flex-direction: column;
+    align-items: flex-end; /* Alinea las letras a la derecha */
+    justify-content: center; /* Centra verticalmente */
     width: 100%;
+    height: 100vh; /* Ocupar toda la pantalla */
     background-color: #333; /* Fondo oscuro para el menú */
     position: absolute;
-    top: 60px; /* Ajusta dependiendo del tamaño del navbar */
+    top: 0; /* Ajustar al principio de la pantalla */
     left: 0;
     padding: 1rem;
+    z-index: 100; /* Asegura que esté sobre otros elementos */
   }
 
   .links.open {
@@ -106,6 +118,13 @@
 
   .link {
     padding: 10px 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Tamaño del texto más grande */
+    color: #fff; /* Color blanco para mejor visibilidad */
+    text-align: right; /* Alinear las letras a la derecha */
+    width: 90%; /* Margen interno para separar de los bordes */
+  }
+
+  .link:hover {
+    color: #00aaff; /* Efecto hover */
   }
 }
