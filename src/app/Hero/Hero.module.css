@@ -9,6 +9,7 @@
     text-align: left;
     padding: 0 20px;
     margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   
   .heroContent {
@@ -18,7 +19,6 @@
   .heroTitle {
     font-size: 10rem;
     font-weight: bold;
-    letter-spacing: 1px;
   }
   
   .heroSubtitle {
@@ -40,6 +40,6 @@
 /* Responsive Design: cuando la pantalla es pequeña */
 @media (max-width: 768px) {
   .hero{
-    margin-top: 5rem;
+    margin-top: 10rem;
   }
 }

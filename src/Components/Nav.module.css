@@ -16,13 +16,11 @@
   transition: transform 0.3s ease-in-out, background-color 0.3s ease, color 0.3s ease;
   background-color: none; 
   margin-left: 12px;
-  margin-top: 10px;
-  /* margin: 1rem;
-  margin-bottom: 0rem; */
+  margin-top: 5px;
 }
 
 .navbar.scrolled {
-  background-color: #fff; /* Fondo blanco cuando se hace scroll */
+  background-color: #340159; /* Fondo blanco cuando se hace scroll */
   color: #000; /* Letras negras cuando se hace scroll */
 }
 
@@ -86,7 +84,7 @@
 /* Responsive Design: cuando la pantalla es pequeña */
 @media (max-width: 768px) {
   .navbar {
-   height: 15%;
+   height: 10%;
     width: 100%;
  
     margin-left: 0px;

@@ -39,6 +39,7 @@ const Nav = () => {
         scrolled ? styles.scrolled : ""
       }`}
     >
+      
       <div className={styles.logo}>
         <img src="./logo.png" alt="Logo" className={styles.logoImage} />
       </div>
