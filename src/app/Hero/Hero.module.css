@@ -27,6 +27,15 @@
     letter-spacing: 1px;
   }
   
+
+  @media (max-width: 768px) {
+    .heroTitle {
+      font-size: 13rem; 
+    }
+    
+    
+  }
+  
   
 /* Responsive Design: cuando la pantalla es pequeña */
 @media (max-width: 768px) {
