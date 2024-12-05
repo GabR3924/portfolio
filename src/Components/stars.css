@@ -1,0 +1,43 @@
+  /* Fondo de la página */
+  .starry-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* Fondo oscuro */
+    overflow: hidden;
+    z-index: -1; /* Detrás del contenido */
+  }
+  
+  /* Estilo para cada estrella */
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white; /* Color de las estrellas */
+    border-radius: 50%; /* Estilo circular */
+    animation: twinkle 4s infinite ease-in-out, fall 10s linear infinite;
+    opacity: 0.8;
+  }
+  
+  /* Parpadeo de las estrellas */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /* Movimiento hacia abajo */
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+  

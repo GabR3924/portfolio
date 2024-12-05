@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import styles from './Hero.module.css';
-
+ 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
 
