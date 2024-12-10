@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import Nav from '@/Components/Nav';
 import Hero from './Hero/Hero';
 import Experience from './Exp/Exp';
+import Projects from './Projects/Projects';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true); // Estado para controlar si está cargando
@@ -28,8 +29,8 @@ export default function Home() {
         <>
           <Nav />
           <Hero />
+          <Projects/>
           <Experience />
-
           {/* Fondo animado con círculos */}
           <div className={styles.circleContainer}>
             <div className={`${styles.circle} ${styles.circle1}`}></div>
