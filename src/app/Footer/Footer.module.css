@@ -26,9 +26,9 @@
   border: 1px solid #fff;
   background: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 1.6rem;
   cursor: pointer;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0;
 }
 
 .button:hover {
@@ -121,15 +121,82 @@
 
 /* Círculos individuales con diferentes tamaños y colores */
 .circle1 {
-  width: 300px;
-  height: 300px;
+  width: 30vw;
+  height: 30vw;
   background: radial-gradient(circle, rgba(177, 0, 226, 0.916) 0%, rgba(177, 0, 226, 0) 80%);
   animation-duration: 15s;
 }
 
 .circle2 {
-  width: 400px;
-  height: 400px;
+  width: 40vw;
+  height: 40vw;
   background: radial-gradient(circle, rgba(0, 42, 255, 0.703) 0%, rgba(0, 43, 255, 0) 80%);
   animation-duration: 18s;
+}
+
+/* Media queries para ajustar el tamaño de fuente en diferentes pantallas */
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 4rem;
+  }
+
+  .button {
+    font-size: 1.4rem;
+  }
+
+  .links p {
+    font-size: 1.8rem;
+  }
+
+  .linkGroup a {
+    font-size: 2rem;
+  }
+
+  .copyright {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .button {
+    font-size: 1.2rem;
+  }
+
+  .links p {
+    font-size: 1.6rem;
+  }
+
+  .linkGroup a {
+    font-size: 1.8rem;
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+
+  .links p {
+    font-size: 1.4rem;
+  }
+
+  .linkGroup a {
+    font-size: 1.5rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
 }
