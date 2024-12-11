@@ -1,7 +1,7 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { Box } from '@mui/material';
-import styles from './Hero.module.css';
+"use client";
+import { useState, useEffect } from "react";
+import { Box } from "@mui/material";
+import styles from "./Hero.module.css";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -12,8 +12,8 @@ const Hero = () => {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -24,7 +24,8 @@ const Hero = () => {
             I&apos;m Gabriela <br /> Rodriguez.
           </h1>
           <p className={styles.heroSubtitle}>
-            Designing purposeful products with meticulous detail, shaping the future of after-school virtual spaces at Ender.
+            Designing purposeful products with meticulous detail, shaping the
+            future of after-school virtual spaces at Ender.
           </p>
         </div>
 
@@ -44,10 +45,15 @@ const Hero = () => {
       <Box className={styles.heroFooter} component="div">
         <div className={styles.slider}>
           <div className={styles.sliderTrack}>
-            <span>Based in Kochi, Kerala, India</span>
-            <span>Currently leading designs at Ender</span>
-            <span>9+ years of experience</span>
+            <span>Based in Caracas, Venezuela</span>
+            <span>Currently Tech at Gocast</span>
+            <span>2+ years of experience</span>
             <span>Pushing pixels remotely</span>
+            <span>Passionate about innovative tech solutions</span>
+            <span>Expert in front-end development</span>
+            <span>Advocate for clean and efficient code</span>
+            <span>Collaborating with global teams</span>
+            <span>Always learning and evolving</span>
           </div>
         </div>
       </Box>
