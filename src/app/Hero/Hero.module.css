@@ -6,7 +6,7 @@
   width: 100%; /* Asegura que el hero ocupe todo el ancho */
   min-height: 100vh;
   padding: 50px 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   position: relative;
 }
 
@@ -14,7 +14,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%; /* Limitar el ancho del texto principal */
+  width: 100%;
+  padding: 1rem;
 }
 
 .heroTitle {
@@ -22,7 +23,6 @@
   line-height: 1.2;
   font-weight: bold;
   font-weight: 400;
-
 }
 
 .heroSubtitle {
@@ -36,7 +36,7 @@
 
 .projects {
   display: flex;
-  flex-direction: column  ; /* Cambiar a row para alinearlos horizontalmente en pantallas grandes */
+  flex-direction: column; /* Cambiar a row para alinearlos horizontalmente en pantallas grandes */
   justify-content: flex-start; /* Asegura que los proyectos estén alineados a la izquierda */
   align-items: center; /* Centra verticalmente los proyectos */
   gap: 30px; /* Espaciado entre proyectos */
@@ -132,13 +132,18 @@
     justify-content: center;
     align-items: center;
     padding: 30px 10px;
+    margin-top: 50%;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroSubtitle {
+    font-size: 2rem;
   }
 
   .projects {
-    position: sticky; /* En móviles, eliminamos la posición absoluta */
-    flex-direction: column; /* Cambiar a columna para que los proyectos se alineen verticalmente */
-    gap: 20px; /* Reducir el espacio entre los proyectos */
-    margin-top: 30px; /* Espacio entre el hero y los proyectos */
-    visibility: visible; /* Asegura que los proyectos sean visibles en dispositivos móviles */
+    display: none;
   }
 }
