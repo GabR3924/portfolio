@@ -1,10 +1,10 @@
+
 /* page.module.css */
 
 .page {
   position: relative;
   overflow: hidden; /* Para evitar que los círculos sobresalgan */
-  }
-/* page.module.css */
+}
 
 /* Estilos para la animación de carga */
 .loader {
@@ -41,7 +41,6 @@
   overflow: hidden; /* Para evitar que los círculos sobresalgan */
 }
 
-
 .hero {
   position: fixed;
   top: 0;
@@ -71,6 +70,22 @@
   /* Ancho inicial */
   width: 50%; /* Ancho inicial (50%) */
   max-width: 100%; /* Evita superar el ancho máximo */
+  padding-bottom: 100px; /* Añade espacio suficiente en la parte inferior para el footer */
+}
+
+.footerWrapper {
+  position: relative; /* Cambiado a relativo */
+  width: 100%;
+  z-index: 3; /* Asegúrate de que el footer se quede en la parte inferior */
+}
+
+/* Estilo para el Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
 .circleContainer {
@@ -83,10 +98,6 @@
   pointer-events: none; /* Evita que los círculos interfieran con el clic */
 }
 
-.experience{
-  z-index: 2;
-
-}
 .circle {
   position: absolute;
   border-radius: 50%;
@@ -178,3 +189,5 @@
   background: radial-gradient(circle, rgba(255, 255, 0, 0.6) 0%, rgba(255, 255, 0, 0) 80%);
   animation-duration: 19s;
 }
+
+
