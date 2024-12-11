@@ -41,6 +41,38 @@
   overflow: hidden; /* Para evitar que los círculos sobresalgan */
 }
 
+
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background: url('/path-to-hero-image.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects {
+  position: relative;
+  margin-top: 100vh; /* Comienza después del Hero */
+  height: auto;
+  background: white;
+  padding: 50px;
+  z-index: 2;
+
+  /* Centrar el contenido */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Ancho inicial */
+  width: 50%; /* Ancho inicial (50%) */
+  max-width: 100%; /* Evita superar el ancho máximo */
+}
+
 .circleContainer {
   position: absolute;
   top: 0;
