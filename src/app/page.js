@@ -68,7 +68,7 @@ export default function Home() {
           >
             <Projects />
           </div>
-          <Experience />
+          {/* <Experience className={styles.experience}/> */}
           <div className={styles.circleContainer}>
             <div className={`${styles.circle} ${styles.circle1}`}></div>
             <div className={`${styles.circle} ${styles.circle2}`}></div>
