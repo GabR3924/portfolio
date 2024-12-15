@@ -73,6 +73,15 @@
   padding-bottom: 100px; /* Añade espacio suficiente en la parte inferior para el footer */
 }
 
+/* Pantallas pequeñas (móviles, <= 600px) */
+@media (max-width: 600px) {
+  .projects {
+   
+    padding: 10px;
+  }
+
+}
+
 .footerWrapper {
   position: relative; /* Cambiado a relativo */
   width: 100%;
