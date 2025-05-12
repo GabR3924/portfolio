@@ -5,6 +5,8 @@ import Nav from '@/Components/Nav';
 import Hero from './Hero/Hero';
 import Projects from './Projects/Projects';
 import Footer from './Footer/Footer';
+import Exp from './Exp/Exp';
+import ExpReverse from './ExpReverse/ExpReverse';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -62,6 +64,8 @@ export default function Home() {
             }}
           >
             <Projects />
+            <Exp/>
+            <ExpReverse/>
           </div>
 
           {/* Div envoltorio del Footer */}

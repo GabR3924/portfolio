@@ -73,7 +73,7 @@ const Projects = () => {
     <section className={styles.experience}>
       <div className={styles.header}>
         <h2 className={styles.title}>EXPERIENCE</h2>
-        <h3 className={styles.subtitle}>HISTORY</h3>
+        {/* <h3 className={styles.subtitle}>HISTORY</h3> */}
       </div>
 
       <div className={styles.experienceGrid}>
@@ -86,7 +86,7 @@ const Projects = () => {
 
             <div className={styles.dateLocation}>
               <p>{experience.date}</p>
-              <p>{experience.location}</p>
+              {/* <p>{experience.location}</p>            */}
             </div>
 
             <ul className={styles.responsibilities}>

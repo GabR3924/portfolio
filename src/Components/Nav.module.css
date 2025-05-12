@@ -20,8 +20,11 @@
 }
 
 .navbar.scrolled {
-  background-color: #340159; /* Fondo blanco cuando se hace scroll */
+  background-color: rgba(20, 0, 35, 0.45); /* Color morado semitransparente */
+  backdrop-filter: blur(8px); /* Efecto de desenfoque */
+  -webkit-backdrop-filter: blur(8px); /* Para compatibilidad con Safari */
   color: #000; /* Letras negras cuando se hace scroll */
+  border-radius: 5rem
 }
 
 .navbar.hidden {
@@ -62,7 +65,7 @@
 }
 
 .link:hover {
-  color: #00aaff;
+  color: #010159;
   transform: scale(1.1);
 }
 
