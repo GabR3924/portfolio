@@ -4,6 +4,7 @@ export const experienceData = [
     position: "Full Stack Web Developer",
     date: "MAR 2024 - ACTUALIDAD",
     location: "VENEZUELA",
+    link: "https://gocastgroup.com",
     responsibilities: [
       "Diseñé e implementé una solución de pago integral para el Banco Nacional de Crédito (BNC) utilizando PHP y arquitectura MVC.",
       "Desarrollé módulos para pagos móviles, tarjetas nacionales y tarjetas de crédito, integrando diversas APIs de pago.",
@@ -44,6 +45,7 @@ export const experienceData = [
     position: "Developer",
     date: "FEB 2025 - ACTUALIDAD",
     location: "VENEZUELA",
+    link: "https://binance-dashboard-eosin.vercel.app",
     responsibilities: [
       "Desarrollé un Bot de Trading P2P con Python/Flask para extracción automatizada de precios y cálculo en tiempo real de márgenes.",
       "Automaticé órdenes y pagos, reduciendo un 70% el tiempo de operación manual.",
