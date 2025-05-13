@@ -50,9 +50,8 @@ const Hero = () => {
             <span>2+ years of experience</span>
             <span>Pushing pixels remotely</span>
             <span>Passionate about innovative tech solutions</span>
-            <span>Expert in front-end development</span>
+            <span>Expert in back-end development</span>
             <span>Advocate for clean and efficient code</span>
-            <span>Collaborating with global teams</span>
             <span>Always learning and evolving</span>
           </div>
         </div>

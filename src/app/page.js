@@ -65,7 +65,7 @@ export default function Home() {
           >
             <Projects />
             <Exp/>
-            <ExpReverse/>
+            {/* <ExpReverse/> */}
           </div>
 
           {/* Div envoltorio del Footer */}
